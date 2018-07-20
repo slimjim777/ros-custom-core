@@ -1,0 +1,16 @@
+name: ros-core-custom
+version: '1.0'
+grade: stable
+confinement: strict
+summary: ROS Custom Core Snap
+description: Adds custom packages to ros-base
+architectures:
+  - armhf
+
+parts:
+  ros-custom:
+    plugin: rospackage
+    rosdistro: kinetic
+    release: xenial
+    rospackages:
+      - ros-kinetic-nodelet
